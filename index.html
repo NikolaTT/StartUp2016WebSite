@@ -1,0 +1,502 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The official site of StartUp@Blagoevgrad">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StartUp@Blagoevgrad</title>
+
+    <!-- Page styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/style_1.css">
+    <link rel="stylesheet" href="swiper/css/swiper.min.css">
+    <style>
+        #view-source {
+            position: fixed;
+            display: block;
+            right: 0;
+            bottom: 0;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            z-index: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+        <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+            <div class="mdl-layout__header-row">
+                <span class="android-title mdl-layout-title">
+          <img class="android-logo-image" id="startup-logo-image" src="images/logos/arrow_logo_very_small.png">
+        </span>
+                <h3 id="startup-logo-text">StartUp@Blagoevgrad</h3>
+                <!-- Add spacer, to align navigation to the right in desktop -->
+                <div class="android-header-spacer mdl-layout-spacer"></div>
+                <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" id="search-field">
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <div class="android-navigation-container">
+                    <nav class="android-navigation mdl-navigation">
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase tab-selectors" id="conference-tab-selector" href="#conference">Conference</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase tab-selectors" href="#weekend">Weekend</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase tab-selectors" href="#open-coffee">Open Coffee</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase tab-selectors" href="#sponsors">Sponsors</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase tab-selectors" href="#about-us">About Us</a>
+                    </nav>
+                </div>
+                <span class="android-mobile-title mdl-layout-title">
+          <img class="android-logo-image" src="images/logos/arrow_logo_very_small.png">
+        </span>
+                <h4 id="startup-logo-text-mobile">StartUp@Blagoevgrad</h4>
+                <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+                    <li class="mdl-menu__item">5.0 Lollipop</li>
+                    <li class="mdl-menu__item">4.4 KitKat</li>
+                    <li disabled class="mdl-menu__item">4.3 Jelly Bean</li>
+                    <li class="mdl-menu__item">Android History</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Burger Menu -->
+        <div class="android-drawer mdl-layout__drawer" id="burger-menu">
+            <span class="mdl-layout-title">
+                <img class="android-logo-image" src="images/logos/arrow_logo_very_small.png">
+            </span>
+            <nav class="mdl-navigation">
+                <!-- Burger Menu -->
+                <a class="mdl-navigation__link tab-selectors" id="conference-tab-selector-mobile" href="#conference">Conference</a>
+                <a class="mdl-navigation__link tab-selectors" href="#weekend">Weekend</a>
+                <a class="mdl-navigation__link tab-selectors" href="#open-coffee">Open Coffee</a>
+                <a class="mdl-navigation__link tab-selectors" href="#sponsors">Sponsors</a>
+                <a class="mdl-navigation__link tab-selectors" href="#about-us">About Us</a>
+                <div class="android-drawer-separator"></div>
+                <!--<span class="mdl-navigation__link" href="">Versions</span>
+        <a class="mdl-navigation__link" href="">Lollipop 5.0</a>
+        <a class="mdl-navigation__link" href="">KitKat 4.4</a>
+        <a class="mdl-navigation__link" href="">Jelly Bean 4.3</a>
+        <a class="mdl-navigation__link" href="">Android history</a>
+        <div class="android-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Resources</span>
+        <a class="mdl-navigation__link" href="">Official blog</a>
+        <a class="mdl-navigation__link" href="">Android on Google+</a>
+        <a class="mdl-navigation__link" href="">Android on Twitter</a>
+        <div class="android-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">For developers</span>
+        <a class="mdl-navigation__link" href="">App developer resources</a>
+        <a class="mdl-navigation__link" href="">Android Open Source Project</a>
+        <a class="mdl-navigation__link" href="">Android SDK</a>-->
+            </nav>
+        </div>
+
+        <div class="startup-content mdl-layout__content">
+
+            <div class="tab-content" id="conference">
+
+                <!-- Swiper -->
+                <div class="swiper-container" id="swiper-conference">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                        <div class="swiper-slide">Slide 10</div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination" id="pagination-conference"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next" id="next-conference"></div>
+                    <div class="swiper-button-prev" id="prev-conference"></div>
+                </div>
+
+                <br>
+
+                <h3 class="tab-content-main-text">The StartUP@Blagoevgrad Conference is an annual event that gathers young enthusiasts, successful entrepreneurs, business angels and coaches. It is a forum that brings together people with ideas, or others searching for inspiration, and those who already went up the stairs to a successful business. The conference is a two-day event where the guest lecturers share their valuable experience and philosophy on how business is done. Up to this moment the StartUP@Blagoevgrad team has organized three consequent conferences. Each year more and more people are getting engaged – 2012 – 140 people; 2013- 180 people; 2014 – 240 people and for the future 2015, we expect and plan the conference to be attended by 300+ people. We are constantly working on improving every element of the conference and make it a pleasant venue for business oriented people to interact with each other and share experience.</h3>
+            </div>
+
+            <div class="tab-content" id="weekend">
+                <!-- Swiper -->
+                <div class="swiper-container" id="swiper-weekend">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                        <div class="swiper-slide">Slide 10</div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination" id="pagination-weekend"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next" id="next-weekend"></div>
+                    <div class="swiper-button-prev" id="prev-weekend"></div>
+                </div>
+                <br>
+
+                <h3 class="tab-content-main-text">The StartUP Weekend event challenges your creativity, your ability to work under pressure, and your motivation to start a company in 54 hours! You have the chance to start a business from scratch with team members you probably meet for the first time! You have a weekend time to prepare your idea with the help of professional mentors. In Sunday afternoon you will pitch your idea in front of a jury of investors and entrepreneurs and compete for super cool prizes!
+                We brought this event to you under the license of the global StartUP Foundation. The StartUP Weekend is a world-famous event that’s been organized all around the world to inspire and motivate people to dare to dream and turn their dreams to reality!</h3>
+
+
+
+            </div>
+
+            <div class="tab-content" id="open-coffee">
+                <!-- Swiper -->
+                <div class="swiper-container" id="swiper-coffee">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                        <div class="swiper-slide">Slide 10</div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination" id="pagination-coffee"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next" id="next-coffee"></div>
+                    <div class="swiper-button-prev" id="prev-coffee"></div>
+                </div>
+                
+                <br>
+
+                <h3 class="tab-content-main-text">Open Coffees are the nicest way to learn something new from a professional by engaging in a cozy, even call it intimate conversation about the newest trends in business! We gather together for something we would hate to define as a lecture because, let’s face it, it sounds boring. And Open Coffees are far from boring! We talk, we joke, we have fun, and drink coffee, while having the great opportunity to broaden our knowledge on different aspects of business.</h3>
+
+                <br>
+                
+            </div>
+
+            <div class="tab-content" id="about-us">
+                <h1 class="tab-content-header">About Us</h1>
+                <br>
+
+                <h3 class="tab-content-main-text">We are a group of enthusiasts  who  strongly  believe  in the
+                importance of entrepreneurship.</h3>
+
+                <div id="team-gallery">
+                    <div class="img">
+                        <div class="desc">Gergana Ivanova</div>
+                        <div class="desc2">President</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">gergana@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Teodor Stoyanov</div>
+                        <div class="desc2">Vice-President</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">teodor@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Stephanie Cvetkova</div>
+                        <div class="desc2">Head of Sponsorship Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">stephanie@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Lyuba Popova</div>
+                        <div class="desc2">Head of Marketing and Design Departments</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">lyuba@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Hristo Staykov</div>
+                        <div class="desc2">Sponsorship Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">hristo@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Bogdan Dimitrov</div>
+                        <div class="desc2">Sponsorship and IT Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">bogdan@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Dimitar Bratovanov</div>
+                        <div class="desc2">Marketing Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">dimitar@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Mladen Manolov</div>
+                        <div class="desc2">Sponsorship Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">mladen@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Jacky Dib</div>
+                        <div class="desc2">Lecturers Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">jacky@startupatblagoevgrad.org</div>
+                    </div>
+                    <div class="img">
+                        <div class="desc">Mirela Cholakova</div>
+                        <div class="desc2">Lecturers Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">mirela@startup@blagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Zhorzh Yordanov</div>
+                        <div class="desc2">Sponsors Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">zhorzh@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Georgi Chapanov</div>
+                        <div class="desc2">Lecturers Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">georgi_ch@startupatblagoevgrad.org</div>
+                    </div>
+                    <div class="img">
+                        <div class="desc">Christina Ivanova</div>
+                        <div class="desc2">Sponsorship and Lecturers Departments</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">christina@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Hristina Balabanova</div>
+                        <div class="desc2">Marketing Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">hristina@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Monika Koleva</div>
+                        <div class="desc2">Lecturers Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">monika@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Georgi Atanasov</div>
+                        <div class="desc2"></div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">georgi@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Penyo Krotev</div>
+                        <div class="desc2">Lecturers Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">penyo@startupatblagoevgrad.org</div>
+                    </div>
+
+
+                    <div class="img">
+                        <div class="desc">Viktoria Pesheva</div>
+                        <div class="desc2">Sponsorship Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">viktoria@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Velislav Borisov</div>
+                        <div class="desc2">Sponsorship Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">velislav@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Viktor Mechev</div>
+                        <div class="desc2">Sponsorship Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">viktor@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Ivaylo Atanasow</div>
+                        <div class="desc2">IT Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">ivaylo@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Martin Mitev</div>
+                        <div class="desc2">Lecturers Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">martin@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Kalina Dushkova</div>
+                        <div class="desc2">Marketing Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">kalina@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Georgi Tsonkov</div>
+                        <div class="desc2">Sponsorship Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">georgi_ts@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Ceci Dimitrova</div>
+                        <div class="desc2">Marketing Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">tsetsi@startupatblagoevgrad.org</div>
+                    </div>
+
+                    <div class="img">
+                        <div class="desc">Nikola Toshev</div>
+                        <div class="desc2">IT Department</div>
+                        <a target="_blank" href="fjords.jpg">
+                            <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+                        </a>
+                        <div class="contact">nikola@startupatblagoevgrad.org</div>
+                    </div>
+                </div>
+
+                <br>
+
+            </div>
+
+        </div>
+
+
+        <script src="material.min.js"></script>
+        <script src="swiper/js/swiper.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiperConference = new Swiper('#swiper-conference', {
+      pagination: '#pagination-conference',
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      paginationClickable: true,
+      spaceBetween: 30,
+      nextButton: '#next-conference',
+      prevButton: '#prev-conference'
+    });
+
+    var swiperWeekend = new Swiper('#swiper-weekend', {
+      pagination: '#pagination-weekend',
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      paginationClickable: true,
+      spaceBetween: 30,
+      nextButton: '#next-weekend',
+      prevButton: '#prev-weekend'
+    });
+    
+    var swiperCoffee = new Swiper('#swiper-coffee', {
+      pagination: '#pagination-coffee',
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      paginationClickable: true,
+      spaceBetween: 30,
+      nextButton: '#next-coffee',
+      prevButton: '#prev-coffee'
+    });
+        </script>
+
+        <script src="scripts/script_1.js"></script>
+</body>
+
+</html>
