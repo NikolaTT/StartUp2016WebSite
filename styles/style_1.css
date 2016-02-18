@@ -118,35 +118,42 @@
         width: 20%;
     }
     
-    #about-us{
+    #about-us {
         text-align: center;
     }
     
-    /*#about-us > div.img {
-        margin: 5px;
-        border: 1px solid #ccc;
-        float: left;
-        width: 180px;
+    #about-us div.img {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        /*border: 1px solid #ccc;*/
+        width: 280px;
+        border: 5px solid #005A78;
     }
 
-    #about-us > div.img:hover {
-        border: 1px solid #777;
+    #about-us div.img:hover {
+        border: 5px solid #2A5AA8;
     }
 
-    #about-us > div.img img {
+    #about-us div.img img {
         width: 100%;
         height: auto;
     }
 
-    #about-us > div.desc {
-        padding: 15px;
+    #about-us div.desc {
+        padding: 5px;
         text-align: center;
-    }*/
+    }
     
     #team-gallery {
-        display: flex;
-        flex-direction: column;
+        display: inline-flex;
+        flex-wrap: wrap;
     }
+    
+    .team-last-row {
+        margin: 0;
+        margin-right: 5px;
+    }
+    
     
     /* for mobile */
     
