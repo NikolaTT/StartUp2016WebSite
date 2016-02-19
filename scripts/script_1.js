@@ -3,6 +3,8 @@ var currentTab = "";
 var initialTabSelector = "";
 var tabContentClass = "tab-content";
 
+//colors used at multiple places
+//better to just have color scheme somehwere as vars
 var selectedTabBackgroundColor = "#FFA600";
 var selectedTabTextColor = "#000000";
 
