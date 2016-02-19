@@ -3,6 +3,13 @@ var currentTab = "";
 var initialTabSelector = "";
 var tabContentClass = "tab-content";
 
+var selectedTabBackgroundColor = "#FFA600";
+var selectedTabTextColor = "#000000";
+
+var unselectedTabBackgroundColor = "#EcEcEc";
+var unselectedTabTextColor = "#757575";
+
+
 window.onload = function () {
 
     var tabContents = document.getElementsByClassName(tabContentClass);
@@ -13,9 +20,11 @@ window.onload = function () {
     currentTab = "conference";
     initialTabSelector = "conference-tab-selector";
 
-    document.getElementById(initialTabSelector).style.backgroundColor = "#000000";
+    document.getElementById(initialTabSelector).style.backgroundColor = selectedTabBackgroundColor;
+    document.getElementById(initialTabSelector).style.color = selectedTabTextColor;
 
     document.getElementById(currentTab).style.display = "flex";
+    
 
     //we take all the tab selectors (like Conference, Weekend, etc.)
     var tabSelectors = document.getElementsByClassName('tab-selectors');
@@ -26,7 +35,8 @@ window.onload = function () {
     for (var i = 0; i < tabSelectors.length; i++) {
         tabSelectors[i].onclick = function () {
             clearTabSelectorsBGColor();
-            this.style.backgroundColor = "#000000";
+            this.style.backgroundColor = selectedTabBackgroundColor;
+            this.style.color = selectedTabTextColor;
             document.getElementById(currentTab).style.display = "none";
             var tabToView = this.getAttribute("href");
             tabToView = tabToView.substring(1);
@@ -70,6 +80,7 @@ var clearTabSelectorsBGColor = function () {
 
 
     for (var i = 0; i < tabSelectors.length; i++) {
-        tabSelectors[i].style.background = "#EcEcEc";
+        tabSelectors[i].style.backgroundColor = unselectedTabBackgroundColor;
+        tabSelectors[i].style.color = unselectedTabTextColor;        
     }
 }
