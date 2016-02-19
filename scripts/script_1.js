@@ -70,6 +70,6 @@ var clearTabSelectorsBGColor = function () {
 
 
     for (var i = 0; i < tabSelectors.length; i++) {
-        tabSelectors[i].style.background = "#FFFFFF";
+        tabSelectors[i].style.background = "#EcEcEc";
     }
 }
