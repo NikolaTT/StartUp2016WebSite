@@ -61,6 +61,11 @@
     
     .tab-content-main-text{
         margin-top: 0.5em;
+        text-align: left;
+    }
+    
+    .tab-content-main-text-centered{
+        text-align: center;
     }
     
     
