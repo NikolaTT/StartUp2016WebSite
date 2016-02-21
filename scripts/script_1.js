@@ -1,6 +1,7 @@
 //used to store the current tab so that it's easy to reference the current tab
 var currentTab = "";
-var initialTabSelector = "";
+var initialTabSelectorDesktop = "";
+var initialTabSelectorMobile = "";
 var tabContentClass = "tab-content";
 
 //colors used at multiple places
@@ -20,10 +21,14 @@ for (var j = 0; j < tabContents.length; j++) {
 }
 
 currentTab = "conference";
-initialTabSelector = "conference-tab-selector";
+initialTabSelectorDesktop = "conference-tab-selector";
+initialTabSelectorMobile = "conference-tab-selector-mobile";
 
-document.getElementById(initialTabSelector).style.backgroundColor = selectedTabBackgroundColor;
-document.getElementById(initialTabSelector).style.color = selectedTabTextColor;
+document.getElementById(initialTabSelectorDesktop).style.backgroundColor = selectedTabBackgroundColor;
+document.getElementById(initialTabSelectorDesktop).style.color = selectedTabTextColor;
+
+document.getElementById(initialTabSelectorMobile).style.backgroundColor = selectedTabBackgroundColor;
+document.getElementById(initialTabSelectorMobile).style.color = selectedTabTextColor;
 
 document.getElementById(currentTab).style.display = "flex";
 document.getElementById(currentTab).style.visibility = "visible";
