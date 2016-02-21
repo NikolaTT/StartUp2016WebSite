@@ -478,7 +478,7 @@ box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.5);
 
 
 /**** Mobile layout ****/
-@media (max-width: 640px) {
+@media (max-width: 1280px) {
 
   /*#startup-logo-text-mobile{
     display: inline;
