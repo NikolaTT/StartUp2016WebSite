@@ -3,20 +3,43 @@ var currentTab = "";
 var initialTabSelector = "";
 var tabContentClass = "tab-content";
 
-window.onload = function () {
+//colors used at multiple places
+//better to just have color scheme somehwere as vars
+var selectedTabBackgroundColor = "#FFA600";
+var selectedTabTextColor = "#000000";
 
-    var tabContents = document.getElementsByClassName(tabContentClass);
+var unselectedTabBackgroundColor = "#EcEcEc";
+var unselectedTabTextColor = "#757575";
+
+
+//window.onload = function () {
+
+var tabContents = document.getElementsByClassName(tabContentClass);
+for (var j = 0; j < tabContents.length; j++) {
+    tabContents[j].style.visibility = "hidden";
+}
+
+currentTab = "conference";
+initialTabSelector = "conference-tab-selector";
+
+document.getElementById(initialTabSelector).style.backgroundColor = selectedTabBackgroundColor;
+document.getElementById(initialTabSelector).style.color = selectedTabTextColor;
+
+document.getElementById(currentTab).style.display = "flex";
+document.getElementById(currentTab).style.visibility = "visible";
+
+
+window.onload = function () {
+    
     for (var j = 0; j < tabContents.length; j++) {
+        tabContents[j].style.visibility = "visible";
         tabContents[j].style.display = "none";
     }
-
-    currentTab = "conference";
-    initialTabSelector = "conference-tab-selector";
-
-    document.getElementById(initialTabSelector).style.backgroundColor = "#000000";
-
+    
     document.getElementById(currentTab).style.display = "flex";
+    document.getElementById(currentTab).style.visibility = "visible";
 
+    
     //we take all the tab selectors (like Conference, Weekend, etc.)
     var tabSelectors = document.getElementsByClassName('tab-selectors');
 
@@ -26,11 +49,13 @@ window.onload = function () {
     for (var i = 0; i < tabSelectors.length; i++) {
         tabSelectors[i].onclick = function () {
             clearTabSelectorsBGColor();
-            this.style.backgroundColor = "#000000";
+            this.style.backgroundColor = selectedTabBackgroundColor;
+            this.style.color = selectedTabTextColor;
             document.getElementById(currentTab).style.display = "none";
             var tabToView = this.getAttribute("href");
             tabToView = tabToView.substring(1);
             document.getElementById(tabToView).style.display = "flex";
+            document.getElementById(tabToView).style.visibility = "visible";
             currentTab = tabToView;
 
             var drawer = document.getElementsByClassName('mdl-layout__drawer')[0];
@@ -70,6 +95,7 @@ var clearTabSelectorsBGColor = function () {
 
 
     for (var i = 0; i < tabSelectors.length; i++) {
-        tabSelectors[i].style.background = "#FFFFFF";
+        tabSelectors[i].style.backgroundColor = unselectedTabBackgroundColor;
+        tabSelectors[i].style.color = unselectedTabTextColor;
     }
 }
