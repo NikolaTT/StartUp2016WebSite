@@ -248,6 +248,15 @@
         }
     }
     
+    @media (max-width: 1000px) and (min-width: 681px){
+         .tab-content-main-text {
+            font-size: x-large;
+        }
+        
+        .tab-content-main-text-centered {
+            font-size: x-large;
+        }        
+    }
     
     /* Snipets */
     
